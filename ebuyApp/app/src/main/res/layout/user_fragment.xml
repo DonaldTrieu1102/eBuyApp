@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_dark"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/gray_dark">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_light"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_200"
+                android:background="@drawable/bien">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageAvatar"
+                    android:layout_width="@dimen/size_80"
+                    android:layout_height="@dimen/size_80"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:src="@drawable/logo" />
+
+                <com.example.admin.ebuy.view.EBCustomFont
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_toRightOf="@+id/imageAvatar"
+                    android:text="@string/username"
+                    android:textColor="@color/white"
+                    android:typeface="serif" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/small"
+                    android:layout_below="@id/txtUserName"
+                    android:layout_marginTop="@dimen/small"
+                    >
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:id="@+id/btnLogin"
+                        android:layout_width="@dimen/size_80"
+                        android:layout_height="@dimen/size_30"
+                        android:background="@drawable/bg_border_organ"
+                        android:gravity="center"
+                        android:text="@string/login"
+                        android:textColor="@color/white" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:id="@+id/btnRegister"
+                        android:layout_width="@dimen/size_80"
+                        android:layout_height="@dimen/size_30"
+                        android:layout_marginLeft="@dimen/small"
+                        android:background="@drawable/bg_border_organ"
+                        android:gravity="center"
+                        android:text="@string/register"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+
+
+                <ImageView
+                    android:id="@+id/btnSetting"
+                    android:layout_width="@dimen/setting_icon"
+                    android:layout_height="@dimen/setting_icon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/margin_small"
+                    android:src="@drawable/setting5" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:id="@+id/txtBuy"
+                        android:layout_width="match_parent"
+                        android:layout_height="39.5dp"
+                        android:text="@string/buy"
+                        android:gravity="center"
+                        android:textColor="@color/color_main"
+                        android:textSize="@dimen/font_largeX"
+                        android:typeface="normal" />
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_main"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:id="@+id/txtSale"
+                        android:layout_width="match_parent"
+                        android:layout_height="39.5dp"
+                        android:text="@string/sale"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_largeX"
+                        android:typeface="normal" />
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/small"
+                    android:background="@color/white">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/list"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/order_list"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/history_order" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_70"
+                    android:layout_marginBottom="@dimen/small"
+                    android:layout_marginTop="@dimen/smallest"
+                    android:gravity="center_vertical"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:baselineAligned="false">
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/email"
+                        android:gravity="center_vertical"
+                        android:textAlignment="center"
+                        android:text="@string/wait_accept"
+                        android:typeface="normal" />
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/deliverytruck"
+                        android:gravity="center_vertical"
+                        android:textAlignment="center"
+                        android:text="@string/wait_take"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:id="@+id/btnDelivering"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/archive"
+                        android:gravity="center_vertical"
+                        android:text="@string/delivering"
+                        android:textAlignment="center"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/returnbox"
+                        android:gravity="center_vertical"
+                        android:textAlignment="center"
+                        android:text="@string/return_product"
+                        android:typeface="normal" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/heart"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/like"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_history_like" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/timeline"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/see_new"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/seen_product" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/purse"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/wallet_shop"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_wallet_shop" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/letter"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/introduce"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/invite" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/dollar"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/shop_coin"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/question_coin" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/feedback"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/myfeedback"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_myfeedback" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/code_discount"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/code_discount"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_my_code_discount" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/myaccount"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/account"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_my_account" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/question"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/centre_help"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_centre_help" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:id="@+id/btnAddProductDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/add"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/add_product"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativerOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/purse"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="Đơn hàng"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="Xem đơn hàng" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/dollar"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/trade"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_trade" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/truck"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/tranfer"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_tranfer" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/feedback"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/feedback_shop"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_feedback_shop" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/chart"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/point_sale"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_point_sale" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/call"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/assistant"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/person_assistant" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginTop="@dimen/smallestX"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawableLeft="@drawable/question"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/see_centre_help"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small"
+                        android:text="@string/see_centre_help" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:id="@+id/seeShop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/see_myshop"
+                        android:textColor="@color/black"
+                        android:typeface="serif" />
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_alignParentEnd="true"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/small" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.example.admin.ebuy.view.EBCustomFont
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_40"
+                        android:drawablePadding="@dimen/small"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/small"
+                        android:text="@string/product"
+                        android:textColor="@color/black"
+                        android:typeface="normal" />
+                    <!--<com.example.admin.ebuy.view.EBCustomFont-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="@dimen/size_40"-->
+                    <!--android:drawableRight="@drawable/ic_right_arrow"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:paddingRight="@dimen/small"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--/>-->
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerviewPro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/smallest"
+                    android:orientation="horizontal">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

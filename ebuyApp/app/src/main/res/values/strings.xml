@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">eBuy</string>
+    <string name="action_settings">Settings</string>
+    <string name="lbl_phone">Số điện thoại</string>
+    <string name="lbl_pin">Mã pin</string>
+    <string name="lbl_login">Đăng nhập</string>
+
+    <string name="txt_history">Lịch sử</string>
+    <string name="txt_account">Tài khoản</string>
+    <string name="txt_news">Tin tức</string>
+
+    <string name="txt_order">Đặt lịch</string>
+
+    <string name="txt_home">Hôm nay</string>
+    <string name="txt_notification">T - báo</string>
+    <string name="txt_progress">Tiến độ</string>
+    <string name="txt_inbox">Inbox</string>
+    <string name="txt_support">Trợ giúp</string>
+
+    <string name="error">Lỗi xảy ra</string>
+    <string name="empty_user_name">Tên đăng nhập không để rỗng</string>
+    <string name="empty_pin">Chưa nhập mã PIN </string>
+    <string name="empty_phonenumber">Chưa nhập số điên thoại</string>
+    <string name="diffirent_pass">Xác nhận mật khẩu lỗi</string>
+    <string name="warning" translatable="false">WARNING</string>
+
+
+    <string name="alert">Thông báo</string>
+    <string name="ok">Đồng ý</string>
+    <string name="no">Huỷ</string>
+
+    <string name="tab_1">Bài tập trên lớp</string>
+    <string name="tab_2">Bài tập về nhà</string>
+    <string name="todo">TODO</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="txt_shopping">Giở hàng</string>
+    <string name="txt_user">Thông tin</string>
+    <string name="txt_list">Danh sách</string>
+    <string name="day">Ngày</string>
+    <string name="check_in">Check in</string>
+    <string name="check_out">Check out</string>
+    <string name="report_text">Tổng ngày công</string>
+    <string name="work_days_text">Tổng ngày làm</string>
+    <string name="work_hours_text">Tổng giờ làm</string>
+
+    <string name="from">Từ</string>
+    <string name="to">Đến</string>
+    <string name="ic_date"></string>
+    <string name="ic_exits"></string>
+    <string name="choose_local">CHỌN KHU VỰC</string>
+    <string name="ic_menu_back"></string>
+
+
+    <string name="ic_report">q</string>
+    <string name="ic_next">c</string>
+    <string name="ic_menu_header"></string>
+
+    <string name="email">Email</string>
+    <string name="phone_number">Số điện thoại</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="add_password">Thêm mật khẩu</string>
+    <string name="gender">Giới tính</string>
+    <string name="birthday">Ngày sinh</string>
+    <string name="account_society">Tài khoản mạng xã hội</string>
+    <string name="confirmpassword">Nhập lại mật khẩu</string>
+    <string name="forgetpassword">Quên mật khẩu ?</string>
+    <string name="login">Đăng nhập</string>
+    <string name="register">Đăng ký</string>
+    <string name="logout">Đăng xuất</string>
+
+
+    // UserFragment
+    //buy
+    <string name="buy">Mua hàng</string>
+    <string name="sale">Bán hàng</string>
+    <string name="order_list">Đơn mua</string>
+    <string name="history_order">Xem lịch sử mua hàng</string>
+    <string name="like">Đã thích</string>
+    <string name="see_history_like">Xem sản phẩm đã thích</string>
+    <string name="see_new">Mới xem</string>
+    <string name="seen_product">Sản phẩm đã xem gần đây</string>
+    <string name="wallet_shop">Ví Shop</string>
+    <string name="see_wallet_shop">Xem ví Shop</string>
+    <string name="introduce">Giới thiệu bạn bè</string>
+    <string name="invite">Mời bạn, nhận xu</string>
+    <string name="shop_coin">Ebuy xu</string>
+    <string name="question_coin">Là sao để bạn săn xu ?</string>
+    <string name="myfeedback">Đánh giá của tôi</string>
+    <string name="see_myfeedback">Xem đánh giá của tôi</string>
+    <string name="code_discount">Mã giảm giá</string>
+    <string name="see_my_code_discount">Xem mã giảm giá của tôi</string>
+    <string name="account">Tài khoản</string>
+    <string name="see_my_account">Xem tài khoản của tôi</string>
+    <string name="wait_accept">Chờ xác nhận</string>
+    <string name="wait_take">Chờ lấy hàng</string>
+    <string name="delivering">Đang giao</string>
+    <string name="return_product">Trả hàng</string>
+
+    <string name="edit_profile">Sửa hồ sơ</string>
+
+    <string name="location_shop">Vị trí Shop</string>
+
+    //sale
+    <string name="add_product">Đăng sản phẩm mới</string>
+    <string name="wallet_ebuy">Ví eBuy</string>
+    <string name="see_wallet_ebuy">Xem ví eBuy</string>
+    <string name="trade">Doanh thu</string>
+    <string name="see_trade">Xem doanh thu của tôi</string>
+    <string name="tranfer">Cài đặt vận chuyển Shop</string>
+    <string name="see_tranfer">Xem vận chuyển</string>
+    <string name="feedback_shop">Đánh giá Shop</string>
+    <string name="see_feedback_shop">Xem đánh giá Shop</string>
+    <string name="point_sale">Chỉ số bán hàng</string>
+    <string name="see_point_sale">Xem bảng hiệu qua hoạt động</string>
+    <string name="assistant">Trợ lí bán hàng</string>
+    <string name="person_assistant">Quản lí Shop của tôi</string>
+    <string name="centre_help">Trung tâm trợ giúp</string>
+    <string name="see_centre_help">Xem trợ giúp</string>
+    <string name="product">Sản phẩm</string>
+    <string name="see_myshop">Xem shop của tôi</string>
+
+
+    //add product
+    <string name="name_product">Tên sản phẩm</string>
+    <string name="describe">Mô tả sản phẩm và #hashtag</string>
+    <string name="list">Danh mục</string>
+    <string name="trademark">Thương hiệu</string>
+    <string name="material">Chất liệu</string>
+    <string name="price">Giá</string>
+    <string name="setup_price">Thiết lập giá</string>
+    <string name="quantity">Số lượng</string>
+    <string name="setup_quantity">Thiết lập số lượng</string>
+    <string name="weight">Cân nặng</string>
+    <string name="status">Trạng thái</string>
+    <string name="finish">Hoàn thành</string>
+    <string name="name_type">Tên danh mục</string>
+
+
+
+</resources>
